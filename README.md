@@ -50,6 +50,9 @@ No experimento, utilizamos o sensor DHT11 para medir temperatura e umidade, e um
 
 Para comunicar-se pela primeira vez com o módulo LoRaWAN Bee, instalamos a biblioteca necessária e configuramos o dispositivo para se conectar à rede LoRaWAN. Este processo envolve a configuração de parâmetros como o Application EUI, Application Key e Device EUI.
 
+![Alt text](dashboard.png)
+
+
 ## Problemas Encontrados
 
 Durante o desenvolvimento e implementação, encontramos diversos desafios:
