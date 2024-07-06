@@ -102,8 +102,12 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 | Alana        |           |
 | Ana Paula    |           |
 | Deivid       |           |
-| João Pedro   |           |
+| João Pedro   | COD, DOC  |
 | Filipe       |           |
 | Yago         |           |
 
 
+Legenda:
+
+ - **COD**: criação ou manutenção do código-fonte utilizado na ESP32, para a configuração, funcionamento e comunicação do módulo LoRaWAN com a TTN (The Things Network).
+ - **DOC**: criação ou manutenção da documentação do projeto, incluindo este arquivo README.md.
