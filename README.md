@@ -2,6 +2,20 @@
 
 Repositório com a documentação do projeto com o módulo LoRa para a aula de Comunicações sem Fio do curso de Engenharia de Telecomunicações do Instituto Federal de Santa Catarina (IFSC), campus São José.
 
+### Tabela de conteúdos
+
+- [Introdução](#introdução)
+- [Parte Teórica](#parte-teórica)
+  - [Conhecimento da Tecnologia LoRaWAN](#conhecimento-da-tecnologia-lorawan)
+  - [Cálculo de Enlace na Teoria e Prática](#cálculo-de-enlace-na-teoria-e-prática)
+  - [Simulação em Software e Radio Mobile](#simulação-em-software-e-radio-mobile)
+- [Programação na Placa](#programação-na-placa)
+  - [Descrição](#descrição)
+  - [Comunicação com o Módulo LoRaWAN Bee](#comunicação-com-o-módulo-lorawan-bee)
+- [Problemas Encontrados](#problemas-encontrados)
+- [Conclusão](#conclusão)
+- [Tabela de Atividades](#tabela-de-atividades)
+
 ## Introdução
 
 Neste relatório é descrito o experimento realizado com LoRaWAN, um protocolo de comunicação sem fio amplamente utilizado na Internet das Coisas (IoT). O foco é entender seus conceitos teóricos, realizar cálculos de enlace, simulações práticas e programação de dispositivos com tal tecnologia.
