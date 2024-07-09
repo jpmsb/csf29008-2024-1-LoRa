@@ -10,11 +10,12 @@ Repositório com a documentação do projeto com o módulo LoRa para a aula de C
   - [Cálculo de Enlace na Teoria e Prática](#cálculo-de-enlace-na-teoria-e-prática)
   - [Simulação em Software e Radio Mobile](#simulação-em-software-e-radio-mobile)
 - [Programação na Placa](#programação-na-placa)
+  - [Dispositivo utilizado](#dispositivo-utilizado)
   - [Descrição](#descrição)
+  - [Bibliotecas Utilizadas](#bibliotecas-utilizadas)
   - [Comunicação com o Módulo LoRaWAN Bee](#comunicação-com-o-módulo-lorawan-bee)
 - [Problemas Encontrados](#problemas-encontrados)
 - [Conclusão](#conclusão)
-- [Tabela de Atividades](#tabela-de-atividades)
 
 ## Introdução
 
@@ -64,12 +65,38 @@ Para prever e otimizar o desempenho de uma rede LoRaWAN, foram utilizadas ferram
 
 ## Programação na Placa
 
+### Dispositivo utilizado
+
+O kit de desenvolvimento utilizado foi o [IoT DevKit - LoRaWAN](https://www.robocore.net/lorawan/iot-devkit-lorawan) da Robocore.
+
+O _hardware_ em questão possui um _NodeMCU_ com o módulo da ESP32 dotado com as seguintes características:
+
+- Processador: Xtensa® Dual-Core 32-bit LX6
+- Memória Flash programável: 4 MB
+- Clock máximo: 240 MHz
+- Memória RAM: 520 KBytes
+- Memória ROM: 448 KBytes
+- 25 pinos digitais com PWM de resolução de até 16 bits
+- Wireless 802.11 b/g/n - 2.4GHz
+- Bluetooth Low Energy padrão 4.2
+- Tensão de alimentação externa: 4,5 V a 9 V
+
+A placa de desenvolvimento a qual o _NodeMCU_ foi utilizado conta com os seguintes sensores:
+
+- DHT11 para temperatura e umidade, conectado no pino 12;
+- Sensor de luminosidade conectado no pino 15;
+- Botão conectado no pino 4;
+- Acelerômetro de 3 eixos, conectados nos pinos de interrupção 34 e 35.
+
 ### Descrição
 
 No experimento, foi utilizado o sensor DHT11 para medir temperatura, sendo a mesma enviada para a TTN.
 
-- **Sensor DHT11**: Capaz de medir temperatura e umidade. Foi integrado utilizando uma biblioteca específica que simplifica a leitura dos dados.
-- **Bibliotecas Utilizadas**: Foi utilizada a biblioteca [`RoboCore_SMW_SX1276M0`](https://github.com/RoboCore/RoboCore_SMW-SX1276M0) para comunicação com o módulo LoRaWAN Bee e a biblioteca específica do DHT11 para leitura de dados.
+#### Bibliotecas Utilizadas
+
+Foi utilizada a biblioteca [`RoboCore_SMW_SX1276M0`](https://github.com/RoboCore/RoboCore_SMW-SX1276M0) para comunicação com o módulo LoRaWAN Bee e a biblioteca específica do DHT11 para leitura de dados.
+
+Além disso, foi utilizada uma [biblioteca própria](https://github.com/jpmsb/dicas/blob/master/PlatformIO/LoRaWan-TTN-Temperatura/src/TemperatureHumidity.h) para operar tal sensor de forma mais abstraída.
 
 ### Comunicação com o Módulo LoRaWAN Bee
 
@@ -79,7 +106,9 @@ No arquivo [`gravar`](https://raw.githubusercontent.com/jpmsb/dicas/master/Platf
 
 ![Alt text](imagens/dashboard.png)
 
-Na imagem acima, é mostrada uma tela contendo dados de temperatura, nível de sinal RSSI, a frequência instantânea de operação, bem como os históricos de temperatura e RSSI, de dois dispositivos.
+Na imagem acima, é mostrada uma tela do serviço TagoIO contendo dados de temperatura, nível de sinal RSSI, a frequência instantânea de operação, bem como os históricos de temperatura e RSSI, de dois dispositivos.
+
+É possível acessar o painel acima [clicando aqui](https://6633ed143971a700094a0b31.tago.run/dashboards/info/66353cb5819ced0008b3cea4?anonymousToken=00000000-6633-ed14-3971-a700094a0b31).
 
 ## Problemas Encontrados
 
