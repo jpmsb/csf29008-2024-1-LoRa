@@ -114,9 +114,7 @@ Na imagem acima, é mostrada uma tela do serviço TagoIO contendo dados de tempe
 
 Durante o desenvolvimento e implementação, foram observados os pontos:
 
-- **Configuração do dispositivo para se comunicar com a Rede LoRaWAN**: Houve complexidade inicial, principalmente por conta das desconexões frequêntes. Para sanar essa questão, foi criada uma rotina na programação que reiniciava a placa caso a conexão tivesse sido perdida ou caso o dispostivo não tenha conseguido se conectar à rede durante uma certa quantidade de tempo. Esse tempo limite é facilmente definido no arquivo [`gravar`](https://raw.githubusercontent.com/jpmsb/dicas/master/PlatformIO/LoRaWan-TTN-Temperatura/gravar).
-
-- **Interferência de Sinal**: Testes de campo revelaram interferências de sinal em áreas urbanas densas, causando problemas de conexão.
+- **Configuração do dispositivo para se comunicar com a Rede LoRaWAN**: Houve complexidade inicial, principalmente por conta das desconexões frequêntes. Para sanar essa questão, foi criada uma rotina na programação que reiniciava a placa caso a conexão tivesse sido perdida ou caso o dispostivo não tenha conseguido se conectar à rede durante uma certa quantidade de tempo. Esse tempo limite é facilmente definido no arquivo [`gravar`](https://raw.githubusercontent.com/jpmsb/dicas/master/PlatformIO/LoRaWan-TTN-Temperatura/gravar);
 
 - **Reconfiguração da placa**: Após certos ciclos de desligamentos, foi necessário reajustar a faixa de frequência do módulo para o padrão australiano, além de ativar os oito canais do padrão utilizados pela TTN. Além disso, foi necessário reajustar o DEVEUI, que assumiu o valor padrão 0000000000000000. Para tal, foram utilizados os seguintes comandos AT:
 
