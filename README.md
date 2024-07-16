@@ -141,7 +141,7 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 |  Responsável | Atividade |
 |--------------|-----------|
 | Alana        |           |
-| Ana Paula    |           |
+| Ana Paula    | Tago.IO e relatório |
 | Deivid       |           |
 | João Pedro   | COD, DOC  |
 | Filipe       |           |
