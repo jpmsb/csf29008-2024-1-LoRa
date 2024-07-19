@@ -76,3 +76,10 @@ title('RSSI LoRa (Deivid, Filipi e Yago)');
 xlabel('RSSI');
 ylabel('Frequência');
 grid on;
+
+figure;
+barh(rssis_unicos, ocorrencias_hist);
+title('RSSI LoRa (Deivid, Filipi e Yago)');
+xlabel('Frequência');
+ylabel('RSSI');
+grid on;

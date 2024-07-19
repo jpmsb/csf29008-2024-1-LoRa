@@ -76,3 +76,11 @@ title('RSSI LoRa (Alana, Ana, João)');
 xlabel('RSSI');
 ylabel('Frequência');
 grid on;
+
+figure;
+barh(rssis_unicos, ocorrencias_hist);
+title('RSSI LoRa (Alana, Ana, João)');
+xlabel('Frequência');
+ylabel('RSSI');
+grid on;
+ylim([min(rssis_unicos) - 1, max(rssis_unicos) + 1]);
