@@ -68,7 +68,7 @@ disp([rssis_unicos', ocorrencias_contagem', ocorrencias_hist']);
 
 % Medições totais
 total_medicoes = length(rssis);
-disp(['Total de medições desde ', datestr(data_inicial, 'dd/mm/yyyy'), ': ', num2str(total_medicoes)]);
+disp(['Total de medições desde ', datestr(data_inicial, 'dd/mm/yyyy'), ' às ', datestr(data_inicial, 'HH:MM:SS'), ': ', num2str(total_medicoes)]);
 
 % Gráfico de barras
 hist(rssis, 100);
