@@ -144,7 +144,7 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 | Ana Paula    | Tago.IO e relatório |
 | Deivid       |           |
 | João Pedro   | COD, DOC  |
-| Filipe       |           |
+| Filipi       |           |
 | Yago         |           |
 
 
