@@ -144,11 +144,12 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 | Ana Paula    | Tago.IO e relatório |
 | Deivid       |           |
 | João Pedro   | COD, DOC  |
-| Filipi       | Radio mobile |
-| Yago         |           |
+| Filipi       |     RM    |
+| Yago         |     RM    |
 
 
 Legenda:
 
  - **COD**: criação ou manutenção do código-fonte utilizado na ESP32, para a configuração, funcionamento e comunicação do módulo LoRaWAN com a TTN (The Things Network).
  - **DOC**: criação ou manutenção da documentação do projeto, incluindo este arquivo README.md.
+ - **RM**: criação ou manutenção dos links de comunicação no software Radio Mobile.
