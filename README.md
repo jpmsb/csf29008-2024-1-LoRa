@@ -110,15 +110,20 @@ No arquivo [`gravar`](https://raw.githubusercontent.com/jpmsb/dicas/master/Platf
 
 O Tago.IO é uma plataforma de IoT que permite a criação de dashboards personalizados para visualização de dados em tempo real. Foi utilizado para exibir os dados de temperatura enviados pelo IoT DevKit.
 
-<figure style="text-align: center;">
-    <figcaption>
-        <strong>Figura 1:</strong> Painel público do Tago.IO com as informações de RSSI e temperatura.
-    </figcaption>
+<figure style="text-align: center; border: 2px solid black; border-radius: 10px; padding: 0; box-sizing: border-box; overflow: hidden;">
+    <div style="border-bottom: 0px solid black; width: 100%; box-sizing: border-box; padding: 5px; background-color: #f0f0f0;">
+        <figcaption>
+            <strong>Figura 2:</strong> Histograma de RSSI.
+        </figcaption>
+    </div>
     <img src="imagens/dashboard.png" alt="Histograma de RSSI" style="max-width: 100%; height: auto;">
-    <figcaption>
-        Fonte: Autoria própria.
-    </figcaption>
+    <div style="border-top: 0px solid black; width: 100%; box-sizing: border-box; padding: 5px; background-color: #f0f0f0;">
+        <figcaption>
+            Fonte: Autoria própria.
+        </figcaption>
+    </div>
 </figure>
+
 
 Na imagem acima, é mostrada uma tela do serviço contendo dados de temperatura, nível de sinal RSSI, a frequência instantânea de operação, bem como os históricos de temperatura e RSSI, de dois dispositivos.
 
@@ -128,14 +133,18 @@ Na imagem acima, é mostrada uma tela do serviço contendo dados de temperatura,
 
 Para acompanhar o padrão da potência recebida, o dispositivo LoRa foi mantido em um ambiente fixo durante alguns dias, permitindo a coleta de dados para verificar a variação do RSSI.
 
-<figure style="text-align: center;">
-    <figcaption>
-        <strong>Figura 2:</strong> Histograma de RSSI.
-    </figcaption>
+<figure style="text-align: center; border: 2px solid black; border-radius: 10px; padding: 0; box-sizing: border-box; overflow: hidden;">
+    <div style="border-bottom: 0px solid black; width: 100%; box-sizing: border-box; padding: 10px; background-color: #f0f0f0;">
+        <figcaption>
+            <strong>Figura 2:</strong> Histograma de RSSI.
+        </figcaption>
+    </div>
     <img src="imagens/rssi-lora-9-dias.svg" alt="Histograma de RSSI" style="max-width: 100%; height: auto;">
-    <figcaption>
-        Fonte: Autoria própria.
-    </figcaption>
+    <div style="border-top: 0px solid black; width: 100%; box-sizing: border-box; padding: 10px; background-color: #f0f0f0;">
+        <figcaption>
+            Fonte: Autoria própria.
+        </figcaption>
+    </div>
 </figure>
 
 Para contexto, o dispositivo foi mantido em um ambiente fechado contendo janelas cujo vidro era coberto de película reflexiva. Além disso, computadores com carcaças metálicas estavam presentes no ambiente. Esse cenário faz com que ocorram refrações e reflexões no sinal.
