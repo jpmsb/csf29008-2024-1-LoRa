@@ -14,6 +14,8 @@ Repositório com a documentação do projeto com o módulo LoRa para a aula de C
   - [Descrição](#descrição)
   - [Bibliotecas Utilizadas](#bibliotecas-utilizadas)
   - [Comunicação com o Módulo LoRaWAN Bee](#comunicação-com-o-módulo-lorawan-bee)
+  - [Tago.IO](#tagoio)
+  - [Histograma de RSSI](#histograma-de-rssi)
 - [Problemas Encontrados](#problemas-encontrados)
 - [Conclusão](#conclusão)
 
@@ -104,11 +106,83 @@ Para realizar a comunicação do IoT DevKit com o módulo LoRaWAN Bee, foi [cria
 
 No arquivo [`gravar`](https://raw.githubusercontent.com/jpmsb/dicas/master/PlatformIO/LoRaWan-TTN-Temperatura/gravar), foram preenchidas as variáveis "appeui" e "appkey", obtidas na TTN.
 
-![Alt text](imagens/dashboard.png)
+#### Tago.IO
 
-Na imagem acima, é mostrada uma tela do serviço TagoIO contendo dados de temperatura, nível de sinal RSSI, a frequência instantânea de operação, bem como os históricos de temperatura e RSSI, de dois dispositivos.
+O Tago.IO é uma plataforma de IoT que permite a criação de dashboards personalizados para visualização de dados em tempo real. Foi utilizado para exibir os dados de temperatura enviados pelo IoT DevKit.
+
+<figure style="text-align: center;">
+    <figcaption>
+        <strong>Figura 1:</strong> Painel público do Tago.IO com as informações de RSSI e temperatura.
+    </figcaption>
+    <img src="imagens/dashboard.png" alt="Histograma de RSSI" style="max-width: 100%; height: auto;">
+    <figcaption>
+        Fonte: Autoria própria.
+    </figcaption>
+</figure>
+
+Na imagem acima, é mostrada uma tela do serviço contendo dados de temperatura, nível de sinal RSSI, a frequência instantânea de operação, bem como os históricos de temperatura e RSSI, de dois dispositivos.
 
 É possível acessar o painel acima [clicando aqui](https://6633ed143971a700094a0b31.tago.run/dashboards/info/66353cb5819ced0008b3cea4?anonymousToken=00000000-6633-ed14-3971-a700094a0b31).
+
+#### Histograma de RSSI
+
+Para acompanhar o padrão da potência recebida, o dispositivo LoRa foi mantido em um ambiente fixo durante alguns dias, permitindo a coleta de dados para verificar a variação do RSSI.
+
+<figure style="text-align: center;">
+    <figcaption>
+        <strong>Figura 2:</strong> Histograma de RSSI.
+    </figcaption>
+    <img src="imagens/rssi-lora-9-dias.svg" alt="Histograma de RSSI" style="max-width: 100%; height: auto;">
+    <figcaption>
+        Fonte: Autoria própria.
+    </figcaption>
+</figure>
+
+Para contexto, o dispositivo foi mantido em um ambiente fechado contendo janelas cujo vidro era coberto de película reflexiva. Além disso, computadores com carcaças metálicas estavam presentes no ambiente. Esse cenário faz com que ocorram refrações e reflexões no sinal.
+
+Abaixo, está uma tabela contendo a os dados mostrados no histograma, medidos entre os dias 15 a 24 de maio de 2024:
+
+| RSSI | Ocorrências |
+|------|-------------|
+| -115 |    2        |
+| -114 |    2        |
+| -113 |    8        |
+| -112 |   11        |
+| -111 |   18        |
+| -110 |    1        |
+| -109 |   32        |
+| -108 |   44        |
+| -107 |   51        |
+| -106 |   20        |
+| -105 |   94        |
+| -104 |    5        |
+| -103 |  202        |
+| -102 |  424        |
+| -101 | 1076        |
+| -100 |  767        |
+|  -99 | 2539        |
+|  -98 |  250        |
+|  -97 | 2087        |
+|  -96 | 1020        |
+|  -95 |  731        |
+|  -94 |  518        |
+|  -93 |  592        |
+|  -92 |  139        |
+|  -91 |  203        |
+|  -90 |  156        |
+|  -89 |  286        |
+|  -88 |  306        |
+|  -87 |  200        |
+|  -86 |   88        |
+|  -85 |   33        |
+|  -84 |    7        |
+|  -83 |    5        |
+|  -82 |    4        |
+|  -81 |    5        |
+|  -80 |    1        |
+|  -78 |    1        |
+
+Analisando a tabela, é possível observar que a maior parte dos dados está concentrada entre -102 e -93 dBm. A maior quatidade de ocorrências foi em -99 dBm, com 2539 registros. Somando tudo, a quantidade de registros foi de 11928.
 
 ## Problemas Encontrados
 
@@ -136,16 +210,16 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 - Ferramentas de simulação como Radio Mobile.
 
 
-# Tabela de Atividades
+# Quadro de Atividades
 
-|  Responsável | Atividade |
-|--------------|-----------|
-| Alana        |           |
+|  Responsável | Atividade           |
+|--------------|---------------------|
+| Alana        |                     |
 | Ana Paula    | Tago.IO e relatório |
-| Deivid       |           |
-| João Pedro   | COD, DOC  |
-| Filipi       |     RM    |
-| Yago         |     RM    |
+| Deivid       |                     |
+| João Pedro   | COD, DOC            |
+| Filipi       |     RM              |
+| Yago         |     RM              |
 
 
 Legenda:
