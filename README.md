@@ -4,20 +4,26 @@ Repositório com a documentação do projeto com o módulo LoRa para a aula de C
 
 ### Tabela de conteúdos
 
-- [Introdução](#introdução)
-- [Parte Teórica](#parte-teórica)
-  - [Conhecimento da Tecnologia LoRaWAN](#conhecimento-da-tecnologia-lorawan)
-  - [Cálculo de Enlace na Teoria e Prática](#cálculo-de-enlace-na-teoria-e-prática)
-  - [Simulação em Software e Radio Mobile](#simulação-em-software-e-radio-mobile)
-- [Programação na Placa](#programação-na-placa)
-  - [Dispositivo utilizado](#dispositivo-utilizado)
-  - [Descrição](#descrição)
-  - [Bibliotecas Utilizadas](#bibliotecas-utilizadas)
-  - [Comunicação com o Módulo LoRaWAN Bee](#comunicação-com-o-módulo-lorawan-bee)
-  - [Tago.IO](#tagoio)
-  - [Histograma de RSSI](#histograma-de-rssi)
-- [Problemas Encontrados](#problemas-encontrados)
-- [Conclusão](#conclusão)
+- [Projeto com Kit LoRa para a aula de Comunicações Sem Fio](#projeto-com-kit-lora-para-a-aula-de-comunicações-sem-fio)
+    - [Tabela de conteúdos](#tabela-de-conteúdos)
+  - [Introdução](#introdução)
+  - [Parte Teórica](#parte-teórica)
+    - [Conhecimento da Tecnologia LoRaWAN](#conhecimento-da-tecnologia-lorawan)
+    - [Cálculo de Enlace na Teoria e Prática](#cálculo-de-enlace-na-teoria-e-prática)
+    - [Simulação em Software e Radio Mobile](#simulação-em-software-e-radio-mobile)
+  - [Programação na Placa](#programação-na-placa)
+    - [Dispositivo utilizado](#dispositivo-utilizado)
+    - [Descrição](#descrição)
+      - [Bibliotecas Utilizadas](#bibliotecas-utilizadas)
+    - [Comunicação com o Módulo LoRaWAN Bee](#comunicação-com-o-módulo-lorawan-bee)
+      - [Tago.IO](#tagoio)
+      - [Histograma de RSSI](#histograma-de-rssi)
+  - [Análide dos dados Outdoor](#análide-dos-dados-outdoor)
+    - [Locais das coletas de dados e distâncias para o gateway](#locais-das-coletas-de-dados-e-distâncias-para-o-gateway)
+    - [Compilação](#compilação)
+  - [Problemas Encontrados](#problemas-encontrados)
+  - [Conclusão](#conclusão)
+- [Quadro de Atividades](#quadro-de-atividades)
 
 ## Introdução
 
@@ -192,6 +198,76 @@ Abaixo, está uma tabela contendo a os dados mostrados no histograma, medidos en
 
 Analisando a tabela, é possível observar que a maior parte dos dados está concentrada entre -102 e -93 dBm. A maior quatidade de ocorrências foi em -99 dBm, com 2539 registros. Somando tudo, a quantidade de registros foi de 11928.
 
+## Análide dos dados Outdoor
+
+Para análise dos dados, como em algumas coletas foram usados dois dispositivos transmissores, o professor sugeriu que se fizesse a compilação dos dados recebidos na forma de uma comunicação com múltiplas antenas transmissoras e uma receptora (Multiple-Input Single-Output), conhecida como MISO.
+
+Assim, a compilação foi gerada admitindo-se o melhor valor RSSI entre as duas placas dentro dos instantes de tempo aproximados nas faixas de 10 segundos, tempo configurado para os dispositivos transmitirem.
+
+A tabela abaixo apresenta os números totais de amostras admitidas de cada dispositivo para obter a comunicação MISO.
+
+| Local                    | Amostras | Amostras - Placa 1 | Amostras - Placa 2 |
+|--------------------------|----------|---------|---------|
+| IFSC                     | 21       |     -    | 21      |
+| Mirante                  | 19       |      -   | 19      |
+| Rua prox. Bar do Xande 1 | 14       |       -  | 14      |
+| Rua prox. Bar do Xande 2 | 21       | 9       | 12      |
+| Praia                    | 20       | 9       | 11      |
+| Beira Mar (Inicio)       | 24       | 7       | 17      |
+| Beira Mar (Meio)         | 30       | 5       | 25      |
+| Beira Mar (Final)        | 22       | 13      | 9       |
+| **Total**                | **171**  | **43**  | **128** |
+
+
+### Locais das coletas de dados e distâncias para o gateway
+
+| Local                   | Distancia (m) | Latitude   | Longitude   |
+|-------------------------|---------------|------------|-------------|
+| IFSC                     | 140           | -27.608121 | -48.632408  |
+| Mirante                  | 493           | -27.611804 | -48.636358  |
+| Rua prox. Bar do Xande 1 | 738           | -27.614435 | -48.632043  |
+| Rua prox. Bar do Xande 2 | 738           | -27.614435 | -48.632043  |
+| Praia                   | 1247          | -27.617875 | -48.627848  |
+| Beira Mar (Inicio)      | 891           | -27.611009 | -48.625449  |
+| Beira Mar (Meio)        | 2000          | -27.603921 | -48.614052  |
+| Beira Mar (Final)       | 3132          | -27.602656 | -48.602604  |
+
+
+### Compilação
+
+| Local                    | Média RSSI  | Máximo | Mínimo | Desvio Padrão |
+|--------------------------|--------|--------|--------|---------------|
+| IFSC                     | -89,24 | -82    | -102   | 5,97          |
+| Mirante                  | -95,42 | -89    | -105   | 3,19          |
+| Rua prox. Bar do Xande 1 | -109,43| -101   | -115   | 4,22          |
+| Rua prox. Bar do Xande 2 | -102,57| -89    | -114   | 5,23          |
+| Praia                    | -109,50| -93    | -115   | 4,98          |
+| Beira Mar (Inicio)       | -93,00 | -86    | -102   | 4,02          |
+| Beira Mar (Meio)         | -90,77 | -75    | -102   | 5,45          |
+| Beira Mar (Final)        | -91,45 | -86    | -97    | 2,86          |
+
+O ponto mais próximo ao gateway, na esquina do IFSC, obteve a melhor média de recepção com -89,24 dBm, e a pior média ficou com o ponto "Praia", transmitido da beira da praia, no final da Rua Antônio Ferreira, próximo ao Centro Histórico de São José, com -109,5 dBm.
+
+A média RSSI dos dados transmitidos da praia foi obtida a uma distância de 1247 metros, enquanto o ponto mais distante, "Beira Mar (Final)", a 3132 metros, gerou uma média de -91,45 dBm, demonstrando que fatores como reflexão próxima ao mar, vegetação, relevos e construções podem influenciar muito na qualidade de uma transmissão sem fio.
+
+| Local                    | RSSI medido | Perda de Percurso | Distancia (m) |
+|--------------------------|-------------|-------------------|---------------|
+| IFSC                     | -89,24      | -89,2             | 140           |
+| Mirante                  | -95,42      | -94,2             | 493           |
+| Rua prox. Bar do Xande 1 | -109,43     | -95,8             | 738           |
+| Rua prox. Bar do Xande 2 | -102,57     | -95,8             | 738           |
+| Praia                    | -109,50     | -97,8             | 1247          |
+| Beira Mar (Inicio)       | -93,00      | -96,5             | 891           |
+| Beira Mar (Meio)         | -90,77      | -99,7             | 2000          |
+| Beira Mar (Final)        | -91,45      | -101              | 3132          |
+
+Os calculos para Perda de Percurso foram realizadas com base no Modelo de propagação Log-Distância.
+
+$$ {PL}(dB) = {PL}(d_0) + 10n\log_{}\left(\frac{d}{d_0}\right)
+$$
+
+- [`Arquivo usado para o calculo da Perda de Percurso`](dados-rssi/perda_de_percurso.m).
+- [`Tabela com os dados usados para gerar a compilação MISO `](dados-rssi/dados_outdoor_miso.md)
 ## Problemas Encontrados
 
 Durante o desenvolvimento e implementação, foram observados os pontos:
