@@ -21,6 +21,7 @@ Repositório com a documentação do projeto com o módulo LoRa para a aula de C
   - [Análide dos dados Outdoor](#análide-dos-dados-outdoor)
     - [Locais das coletas de dados e distâncias para o gateway](#locais-das-coletas-de-dados-e-distâncias-para-o-gateway)
     - [Compilação](#compilação)
+  - [Mapa de Calor](#mapa-de-calor)
   - [Problemas Encontrados](#problemas-encontrados)
   - [Conclusão](#conclusão)
 - [Quadro de Atividades](#quadro-de-atividades)
@@ -250,6 +251,7 @@ O ponto mais próximo ao gateway, na esquina do IFSC, obteve a melhor média de 
 
 A média RSSI dos dados transmitidos da praia foi obtida a uma distância de 1247 metros, enquanto o ponto mais distante, "Beira Mar (Final)", a 3132 metros, gerou uma média de -91,45 dBm, demonstrando que fatores como reflexão próxima ao mar, vegetação, relevos e construções podem influenciar muito na qualidade de uma transmissão sem fio.
 
+
 | Local                    | RSSI medido | Perda de Percurso | Distancia (m) |
 |--------------------------|-------------|-------------------|---------------|
 | IFSC                     | -89,24      | -89,2             | 140           |
@@ -268,6 +270,10 @@ $$
 
 - [`Arquivo usado para o calculo da Perda de Percurso`](dados-rssi/perda_de_percurso.m).
 - [`Tabela com os dados usados para gerar a compilação MISO `](dados-rssi/dados_outdoor_miso.md)
+
+## Mapa de Calor
+
+![Mapa de Calor](/imagens/mapa_de_calor.png)
 ## Problemas Encontrados
 
 Durante o desenvolvimento e implementação, foram observados os pontos:
@@ -300,7 +306,7 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 |--------------|---------------------|
 | Alana        |                     |
 | Ana Paula    | Tago.IO e relatório |
-| Deivid       |                     |
+| Deivid       | Dados de Análise e mapa de calor|
 | João Pedro   | COD, DOC            |
 | Filipi       |     RM              |
 | Yago         |     RM              |
