@@ -18,7 +18,7 @@ Repositório com a documentação do projeto com o módulo LoRa para a aula de C
     - [Comunicação com o Módulo LoRaWAN Bee](#comunicação-com-o-módulo-lorawan-bee)
       - [Tago.IO](#tagoio)
       - [Histograma de RSSI](#histograma-de-rssi)
-  - [Análide dos dados Outdoor](#análide-dos-dados-outdoor)
+  - [Análise dos dados Outdoor](#análise-dos-dados-outdoor)
     - [Locais das coletas de dados e distâncias para o gateway](#locais-das-coletas-de-dados-e-distâncias-para-o-gateway)
     - [Compilação](#compilação)
   - [Mapa de Calor](#mapa-de-calor)
@@ -67,10 +67,9 @@ O cálculo de enlace envolve a análise da propagação do sinal e as condiçõe
 
 ### Simulação em Software e Radio Mobile
 
-Para prever e otimizar o desempenho de uma rede LoRaWAN, foram utilizadas ferramentas de simulação que modelam a propagação do sinal e a cobertura de rede. O Radio Mobile é um software especializado para simulação de propagação de ondas de rádio em redes de comunicação.
+Para prever e otimizar o desempenho de uma rede LoRaWAN, foram realizadas simulações com o software [Radio Mobile](https://www.ve2dbe.com/rmonline_s.asp). A ferramenta permite a modelagem de cenários de comunicação, considerando fatores como a topografia, a vegetação e a presença de obstáculos.
 
-- **Configuração do Radio Mobile**: Foi configurado o *software* com parâmetros específicos do enlace, como frequência, potência de transmissão e características da antena.
-- **Simulação de Cobertura**: Foram realizadas simulações para mapear a cobertura de rede, identificando áreas com boa recepção e potenciais zonas de sombra.
+Clique [aqui](dados-rssi/simulacao.md) para visualizar todas as simulações realizadas.
 
 ## Programação na Placa
 
@@ -199,7 +198,7 @@ Abaixo, está uma tabela contendo a os dados mostrados no histograma, medidos en
 
 Analisando a tabela, é possível observar que a maior parte dos dados está concentrada entre -102 e -93 dBm. A maior quatidade de ocorrências foi em -99 dBm, com 2539 registros. Somando tudo, a quantidade de registros foi de 11928.
 
-## Análide dos dados Outdoor
+## Análise dos dados Outdoor
 
 Para análise dos dados, como em algumas coletas foram usados dois dispositivos transmissores, o professor sugeriu que se fizesse a compilação dos dados recebidos na forma de uma comunicação com múltiplas antenas transmissoras e uma receptora (Multiple-Input Single-Output), conhecida como MISO.
 
@@ -302,14 +301,14 @@ Este relatório cobriu o conhecimento teórico e prático da tecnologia LoRaWAN,
 
 # Quadro de Atividades
 
-|  Responsável | Atividade           |
-|--------------|---------------------|
-| Alana        |                     |
-| Ana Paula    | Tago.IO e relatório |
-| Deivid       | Dados de Análise e mapa de calor|
-| João Pedro   | COD, DOC            |
-| Filipi       |     RM              |
-| Yago         |     RM              |
+|  Responsável | Atividade                        |
+|--------------|----------------------------------|
+| Alana        |                                  |
+| Ana Paula    | Tago.IO e relatório              |
+| Deivid       | Dados de Análise e mapa de calor |
+| João Pedro   | COD, DOC                         |
+| Filipi       |     RM                           |
+| Yago         |     RM                           |
 
 
 Legenda:
