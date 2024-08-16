@@ -2,8 +2,6 @@
 
 ### Locais
 
-- [Simulação com Radio Mobile](#simulação-com-radio-mobile)
-    - [Locais](#locais)
   - [IFSC](#ifsc)
   - [Mirante](#mirante)
   - [Rua próximo ao Bar do Xande](#rua-próximo-ao-bar-do-xande)
